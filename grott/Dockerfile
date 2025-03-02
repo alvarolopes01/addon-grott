@@ -2,7 +2,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:16.1.1
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
-ENV GIT_REF=b5e58170d47576ba0036007b1999e52feb854a3a
+ENV GIT_REF=86e902983dcf39149695e96f8a2eeaa5f12425d6
 ENV LANG=C.UTF-8
 
 # Install python/pip
@@ -18,7 +18,7 @@ WORKDIR /app
 RUN curl -Lk "https://github.com/johanmeijer/grott/$GIT_REF.tar.gz" --output files.tar.gz \
     && tar --strip-components=1 -xzf files.tar.gz \
     && rm files.tar.gz \
-    && cp "examples/Record Layout/T065120.json" ./
+    && cp "Record Layout/T065120.json" ./
 
 
 
