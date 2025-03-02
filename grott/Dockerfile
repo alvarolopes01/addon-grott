@@ -15,7 +15,7 @@ COPY script.sh /app/script.sh
 RUN chmod a+x /app/script.sh
 
 WORKDIR /app
-RUN curl -Lk "https://github.com/johanmeijer/grott/archive/$GIT_REF.tar.gz" --output files.tar.gz \
+RUN curl -Lk "https://github.com/johanmeijer/grott/$GIT_REF.tar.gz" --output files.tar.gz \
     && tar --strip-components=1 -xzf files.tar.gz \
     && rm files.tar.gz \
     && cp "examples/Record Layout/T065120.json" ./
