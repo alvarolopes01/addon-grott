@@ -18,7 +18,7 @@ WORKDIR /app
 RUN curl -Lk "https://github.com/johanmeijer/grott/$GIT_REF.tar.gz" --output files.tar.gz \
     && tar --strip-components=1 -xzf files.tar.gz \
     && rm files.tar.gz \
-    && cp "examples/Record Layout/T065120.json" ./
+    && cp "examples/Record Layout/T065020.json" ./
 
 
 
